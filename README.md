@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+## VSCODE settings
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
+```json
+{
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "editor.formatOnSave": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "git.ignoreRebaseWarning": true,
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "cSpell.languageSettings": [],
+  "cSpell.language": "en-US, ru",
+  "cSpell.hideAddToDictionaryCodeActions": true,
+  "cSpell.suggestionMenuType": "quickFix",
+  "cSpell.numSuggestions": 4,
+  "cSpell.userWords": [
+    "classname"
   ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
+  "git.confirmSync": false,
+  "eslint.codeActionsOnSave.rules": null,
+  "eslint.useFlatConfig": true,
+  "eslint.options": {
+    "flags": ["unstable_config_lookup_from_file"],
   },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
+  "eslint.trace.server": "verbose",
+  "eslint.nodeEnv": "",
+  "eslint.timeBudget.onValidation": {
+    "warn": 4000,
+    "error": 8000
   },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+  "prettier.enableDebugLogs": true
+}
+
 ```
